@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contato | Natal Encantado</title>
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎄%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsivo.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <header class="cabecalho">
+
+        <a class="logo" href="index.html">
+            <span class="logo-icone">✦</span>
+            <span>Natal <strong>Encantado</strong></span>
+        </a>
+
+        <button class="botao-menu" id="botao-menu"
+            aria-label="Abrir menu" aria-expanded="false">☰</button>
+
+        <nav class="menu" id="menu">
+            <a href="index.html">Início</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="sobre.html">Sobre nós</a>
+            <a href="galeria.html">Galeria</a>
+            <a class="link-ativo" href="contato.html">Contato</a>
+        </nav>
+
+        <a class="botao-cabecalho" href="produtos.html">Comprar agora</a>
+
+    </header>
+
+    <main>
+
+        <section class="cabecalho-pagina">
+            <span class="etiqueta">Estamos aqui para ajudar</span>
+            <h1>Entre em contato</h1>
+            <p>Envie sua dúvida ou mensagem para nossa equipe.</p>
+        </section>
+
+        <section class="conteudo-pagina">
+
+            <div class="titulo-secao">
+                <h2>Envie sua mensagem</h2>
+                <p>Preencha os campos abaixo.</p>
+            </div>
+
+            <!-- O formulário será validado pelo JavaScript -->
+            <form class="formulario" id="form-contato" novalidate>
+
+                <div class="campo">
+                    <label for="nome">Nome completo</label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder="Digite seu nome"
+                        required
+                        minlength="3">
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="seuemail@exemplo.com"
+                        required>
+                </div>
+
+                <div class="campo">
+                    <label for="assunto">Assunto</label>
+
+                    <select id="assunto" name="assunto" required>
+                        <option value="">Selecione um assunto</option>
+                        <option value="produtos">Dúvidas sobre produtos</option>
+                        <option value="pedido">Dúvidas sobre pedidos</option>
+                        <option value="sugestao">Sugestão</option>
+                        <option value="outro">Outro assunto</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="mensagem">Mensagem</label>
+
+                    <textarea
+                        id="mensagem"
+                        name="mensagem"
+                        placeholder="Escreva sua mensagem..."
+                        required
+                        minlength="10"></textarea>
+                </div>
+
+                <button class="botao botao-verde" type="submit">
+                    Enviar mensagem
+                </button>
+
+                <!-- O JavaScript mostrará a resposta aqui -->
+                <p class="mensagem-formulario"
+                    id="retorno-contato"
+                    aria-live="polite"></p>
+
+            </form>
+
+
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+
+        <div class="rodape-conteudo">
+
+            <div>
+                <a class="logo logo-rodape" href="index.html">
+                    ✦ Natal <strong>Encantado</strong>
+                </a>
+                <p>Espalhando a magia do Natal em cada detalhe.</p>
+            </div>
+
+            <div>
+                <h3>Navegação</h3>
+                <a href="index.html">Início</a>
+                <a href="produtos.html">Produtos</a>
+                <a href="sobre.html">Sobre nós</a>
+                <a href="galeria.html">Galeria</a>
+            </div>
+
+            <div>
+                <h3>Atendimento</h3>
+                <p>Segunda a sexta</p>
+                <p>Das 9h às 18h</p>
+                <a href="contato.html">Fale conosco</a>
+            </div>
+
+        </div>
+
+        <div class="rodape-final">
+            <p>© 2026 Natal Encantado. Imagens: Unsplash.</p>
+        </div>
+
+    </footer>
+
+    <button class="botao-musica" id="btn-musica" aria-pressed="false">🔔 Tocar música</button>
+    <button class="botao-topo" id="topo" aria-label="Voltar ao topo">↑</button>
+
+</body>
+</html>
