@@ -1,0 +1,30 @@
+LOJA: Natal Encantado
+SEGMENTO: Decoração, enfeites, presentes, iluminação e embalagens natalinas
+TURMA: 1TI D
+
+INTEGRANTES:
+  Pedro Henrique  
+
+
+
+ 1. Slideshow / carrossel - index.html
+ 2. Parallax - index.html
+ 3. Sons (música e sininho gerados com Web Audio API) - todas as páginas
+ 4. Cards dinâmicos (50 produtos) - produtos.html
+ 5. Filtro, busca e ordenação - produtos.html
+ 6. Carrinho de compras com localStorage - produtos.html
+ 7. Contagem regressiva para o Natal - sobre.html
+ 8. Validação de formulário - contato.html
+ 9. Menu responsivo (hambúrguer) - todas as páginas
+ 10. Lightbox - galeria.html
+ 11. Efeito de neve - todas as páginas
+ 12. Botão voltar ao topo - todas as páginas
+
+CRÉDITOS (imagens, sons e ícones):
+ - Imagens: Unsplash (https://unsplash.com)
+ - Sons: gerados pelo próprio código (sem arquivos de áudio)
+
+esse é o link que vai pro capcut ver meu video 
+https://www.capcut.com/view/7707431760736797185?workspaceId=7707431801609879572
+giyhub link
+https://github.com/repos

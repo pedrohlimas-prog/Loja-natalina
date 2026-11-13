@@ -1,0 +1,1036 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cores e configurações reutilizadas pelo site */
+:root {
+    --vermelho: #9a0d00;
+    --verde-escuro: #123d2b;
+    --verde: #1e5b3d;
+    --verde-claro: #e8f0e8;
+    --dourado: #d8b36a;
+    --creme: #f4e6ca;
+    --branco: #f3deb4;
+    --texto: #26352c;
+    --texto-claro: #667168;
+    --borda: #e7e5dc;
+    --sombra: 0 10px 30px rgba(22, 61, 28, 0.1);
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--texto);
+    background-color: var(--creme);
+    line-height: 1.05;
+}
+
+/* Evita que imagens ultrapassem seus espaços */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+
+
+.cabecalho {
+    min-height: 82px;
+    padding: 15px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    background-color: var(--branco);
+    border-bottom: 1px solid var(--borda);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--verde-escuro);
+    font-size: 21px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.logo-icone {
+    color: #bd8b32;
+    font-size: 30px;
+}
+
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+
+.menu a {
+    color: var(--texto-claro);
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+
+.menu a:hover,
+.menu a.link-ativo {
+    color: #FFD700;
+}
+
+/* Botão de compra no cabeçalho */
+.botao-cabecalho {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    padding: 11px 18px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+/* Efeito do botão */
+.botao-cabecalho:hover {
+    background-color: var(--vermelho);
+}
+
+/* Botão do menu para telas pequenas */
+.botao-menu {
+    display: none;
+    border: none;
+    background: transparent;
+    color: var(--verde-escuro);
+    font-size: 28px;
+}
+
+/* =========================================
+   3. BANNER PRINCIPAL
+   ========================================= */
+
+.banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+    padding: 65px 7%;
+    background:
+        radial-gradient(circle at 10% 20%, #e8eddf 0, transparent 38%),
+        var(--creme);
+}
+
+/* Textos do banner */
+.banner-conteudo {
+    max-width: 600px;
+}
+
+/* Pequena etiqueta acima dos títulos */
+.etiqueta {
+    display: inline-block;
+    color: var(--verde);
+    background-color: var(--verde-claro);
+    border-radius: 30px;
+    padding: 6px 13px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Título principal */
+.banner h1 {
+    margin: 22px 0;
+    color: var(--verde-escuro);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(38px, 5vw, 62px);
+    line-height: 1.12;
+}
+
+/* Destaca uma palavra do título */
+.banner h1 span {
+    color: #b48b43;
+}
+
+/* Parágrafo de apresentação */
+.banner-conteudo > p {
+    color: var(--texto-claro);
+    max-width: 480px;
+    font-size: 16px;
+}
+
+/* Grupo de botões */
+.banner-botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 28px;
+}
+
+/* Estilo padrão dos botões */
+.botao {
+    display: inline-block;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    padding: 13px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+/* Pequeno movimento ao passar o mouse */
+.botao:hover {
+    transform: translateY(-2px);
+}
+
+/* Botão dourado */
+.botao-dourado {
+    border: 10px solid var(--dourado);
+    background-color: var(--dourado);
+    color: #26351f;
+}
+
+.botao-dourado:hover {
+    background-color: #c7a153;
+}
+
+/* Botão com fundo transparente */
+.botao-contorno {
+    border-color: #c8d2c6;
+    color: var(--verde-escuro);
+}
+
+.botao-contorno:hover {
+    background-color: var(--branco);
+}
+
+/* Frase abaixo dos botões */
+.banner-conteudo .frase-banner {
+    margin-top: 25px;
+    font-size: 13px;
+}
+
+/* Estilo da imagem principal */
+.banner-imagem {
+    max-width: 500px;
+    height: 500px;
+    overflow: hidden;
+    margin: 1em auto;
+    border-radius: 30px 30px 30px 30px;
+    box-shadow: var(--sombra);
+}
+
+/* Faz a imagem preencher o espaço */
+.banner-imagem img {
+    width: 160%;
+    height: 100%;
+    font-size: 58px;
+    object-fit: cover;
+     object-position: center; 
+}
+
+
+/* =========================================
+   4. BENEFÍCIOS DA LOJA
+   ========================================= */
+
+.beneficios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 45px 8%;
+    background-color: var(--branco);
+    border-top: 1px solid var(--borda);
+    border-bottom: 1px solid var(--borda);
+}
+
+/* Cada cartão de benefício */
+.beneficio {
+    text-align: center;
+    padding: 10px;
+}
+
+/* Ícone de cada benefício */
+.beneficio span {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 32px;
+}
+
+/* Título dos benefícios */
+.beneficio h3 {
+    margin-bottom: 7px;
+    color: var(--verde-escuro);
+    font-size: 17px;
+}
+
+/* Descrição dos benefícios */
+.beneficio p {
+    color: var(--texto-claro);
+    font-size: 14px;
+}
+
+/* =========================================
+   5. SEÇÃO DE PRODUTOS
+   ========================================= */
+
+.secao-produtos {
+    padding: 75px 8%;
+}
+
+/* Centraliza o título da seção */
+.titulo-secao {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+/* Título das seções */
+.titulo-secao h2 {
+    margin: 14px 0 8px;
+    color: var(--verde-escuro);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(27px, 4vw, 38px);
+}
+
+/* Texto de apoio */
+.titulo-secao p {
+    color: var(--texto-claro);
+}
+
+/* Grade de produtos */
+.grade-produtos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+/* Cartão individual do produto */
+.cartao-produto {
+    overflow: hidden;
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    background-color: var(--branco);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Efeito ao passar o mouse no cartão */
+.cartao-produto:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra);
+}
+
+/* Imagem do produto */
+.imagem-produto {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    background-color: var(--verde-claro);
+}
+
+/* Informações do produto */
+.info-produto {
+    padding: 18px;
+}
+
+/* Categoria do produto */
+.categoria-produto {
+    color: var(--verde);
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Nome do produto */
+.info-produto h3 {
+    margin: 7px 0;
+    color: var(--verde-escuro);
+    font-size: 18px;
+}
+
+/* Descrição do produto */
+.descricao-produto {
+    min-height: 44px;
+    color: var(--texto-claro);
+    font-size: 13px;
+}
+
+/* Preço do produto */
+.preco-produto {
+    display: block;
+    margin: 14px 0;
+    color: var(--verde);
+    font-size: 21px;
+    font-weight: bold;
+}
+
+
+.botao-adicionar {
+    width: 100%;
+    padding: 11px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+
+.botao-adicionar:hover {
+    background-color: var(--verde);
+}
+
+
+.centro {
+    margin-top: 35px;
+    text-align: center;
+}
+
+/* Caixa principal do carrinho */
+.caixa-carrinho {
+    max-width: 800px; /* Limita a largura da caixa */
+    margin: 40px auto; /* Centraliza a caixa */
+    padding: 30px; /* Cria espaço interno */
+    background-color: var(--branco); /* Fundo branco */
+    border: 1px solid var(--borda); /* Borda fina */
+    border-radius: 12px; /* Arredonda os cantos */
+    box-shadow: var(--sombra); /* Adiciona uma sombra */
+}
+.botao-verde {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+}
+
+.botao-verde:hover {
+    background-color: var(--verde);
+}
+
+
+.faixa-especial {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 0 8% 75px;
+    padding: 40px;
+    border-radius: 12px;
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+}
+
+.faixa-especial .etiqueta {
+    background-color: rgba(255, 255, 255, 0.12);
+    color: var(--dourado);
+}
+
+
+/* CORREÇÃO: cor definida aqui para vencer a regra global "h2" */
+.faixa-especial h2 {
+    margin: 12px 0;
+    color: var(--branco);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+}
+
+.faixa-especial p {
+    color: #e0e9e1;
+    font-size: 14px;
+}
+
+
+
+.cabecalho-pagina {
+    padding: 65px 8%;
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    text-align: center;
+}
+
+
+.cabecalho-pagina h1 {
+    margin: 10px 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(32px, 5vw, 48px);
+}
+
+/* Texto do topo das páginas */
+.cabecalho-pagina p {
+    color: #e0e9e1;
+}
+
+.conteudo-pagina {
+    min-height: 350px;
+    padding: 55px 8%;
+}
+
+
+.conteudo-pagina h2 {
+    margin-bottom: 15px;
+    color: var(--verde-escuro);
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.conteudo-pagina p {
+    margin-bottom: 15px;
+    color: var(--texto-claro);
+}
+
+
+.formulario {
+    display: grid;
+    gap: 16px;
+    max-width: 650px;
+    margin: 25px auto 0;
+}
+
+
+.campo {
+    display: grid;
+    gap: 7px;
+}
+
+
+.campo input,
+.campo textarea,
+.campo select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--borda);
+    border-radius: 6px;
+    background-color: var(--branco);
+    color: var(--texto);
+    font: inherit;
+}
+
+
+
+.campo textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.campo input:focus,
+.campo textarea:focus,
+.campo select:focus {
+    outline: 2px solid var(--dourado);
+    border-color: var(--dourado);
+}
+
+.mensagem-formulario {
+    margin-top: 15px;
+    color: var(--verde);
+    font-weight: bold;
+}
+
+
+.grade-galeria {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.grade-galeria img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 9px;
+}
+
+
+.controles-produtos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.controles-produtos input,
+.controles-produtos select {
+    flex: 1;
+    min-width: 180px;
+    padding: 12px;
+    border: 1px solid var(--borda);
+    border-radius: 6px;
+    background-color: var(--branco);
+}
+
+
+.aviso-vazio {
+    padding: 25px;
+    color: var(--texto-claro);
+    text-align: center;
+}
+
+
+
+.rodape {
+    background-color: #0d2c20;
+    color: var(--branco);
+}
+
+.rodape-conteudo {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 45px;
+    padding: 50px 8%;
+}
+
+.logo-rodape {
+    margin-bottom: 15px;
+    color: var(--branco);
+}
+
+
+.rodape h3 {
+    margin-bottom: 12px;
+    color: var(--dourado);
+}
+
+
+.rodape p {
+    margin-bottom: 8px;
+    color: #d5e0d7;
+    font-size: 14px;
+}
+
+.rodape-conteudo a:not(.logo) {
+    display: block;
+    width: fit-content;
+    margin-bottom: 7px;
+    color: #d5e0d7;
+    font-size: 14px;
+}
+
+
+.rodape-conteudo a:hover {
+    color: var(--dourado);
+}
+
+
+.rodape-final {
+    padding: 12px 5%;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    text-align: center;
+}
+
+.rodape-final p {
+    margin: 0;
+}
+
+
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.banner-conteudo {
+    animation: aparecer 0.8s ease-out;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Itens que aparecem dentro do carrinho */
+.item-carrinho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--borda);
+}
+
+/* Texto dos itens do carrinho */
+.item-carrinho p {
+    margin: 0;
+}
+
+/* Botão de remover do carrinho */
+.item-carrinho button {
+    width: auto;
+    padding: 8px 12px;
+    background-color: #8b302c;
+}
+
+/* Ajusta o carrinho em telas pequenas */
+@media (max-width: 500px) {
+    .item-carrinho {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+/* Permite indicar que as imagens da galeria são clicáveis */
+.grade-galeria img {
+    cursor: zoom-in;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.grade-galeria img:hover {
+    transform: scale(1.02);
+    box-shadow: var(--sombra);
+}
+
+/* Fundo que aparece atrás da imagem ampliada */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    background-color: rgba(0, 0, 0, 0.88);
+}
+
+/* Imagem ampliada */
+.lightbox img {
+    max-width: 90vw;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* Botão para fechar a visualização */
+.lightbox button {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    padding: 5px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--branco);
+    color: var(--verde-escuro);
+    font-size: 25px;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+/* Rodapé da página */
+.rodape {
+    margin-top: auto;
+    background-color: #0d2c20;
+    color: var(--branco);
+}
+
+
+.natal {
+  background: #f3e6c8;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.conteudo {
+  max-width: 800px;
+  margin: 0 auto;          
+}
+
+h2 {
+  font-family: Georgia, serif;
+  color: #14402a;
+  margin-top: 40px;
+}
+
+p {
+  color: #555;
+  line-height: 1.7;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin: 40px 0;
+}
+
+.galeria img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;        
+  border-radius: 12px;
+  border: 4px solid #fff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.galeria-unica {
+  grid-template-columns: 1fr;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================================
+   SLIDESHOW
+   ========================================= */
+
+.slideshow {
+    position: relative;
+    height: 380px;
+    overflow: hidden;
+    background-color: var(--verde-escuro);
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.9s ease;
+}
+
+.slide.ativo {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-texto {
+    position: absolute;
+    left: 8%;
+    bottom: 15%;
+    max-width: 480px;
+    padding: 20px 24px;
+    border-radius: 10px;
+    background-color: rgba(13, 44, 32, 0.78);
+    color: var(--branco);
+}
+
+.slide-texto h2 {
+    margin: 0 0 8px;
+    color: var(--dourado);
+    font-size: clamp(20px, 3vw, 30px);
+}
+
+.slide-texto p {
+    margin: 0;
+    color: #e0e9e1;
+}
+
+.slide-seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(243, 222, 180, 0.9);
+    color: var(--verde-escuro);
+    font-size: 28px;
+    line-height: 1;
+}
+
+.slide-seta:hover {
+    background-color: var(--dourado);
+}
+
+.slide-seta.anterior { left: 20px; }
+.slide-seta.proximo { right: 20px; }
+
+.slide-indicadores {
+    position: absolute;
+    bottom: 14px;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.slide-indicadores button {
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    border: 2px solid var(--branco);
+    border-radius: 50%;
+    background: transparent;
+}
+
+.slide-indicadores button.ativo {
+    background-color: var(--dourado);
+    border-color: var(--dourado);
+}
+
+/* =========================================
+   PARALLAX
+   ========================================= */
+
+.parallax {
+    position: relative;
+    min-height: 340px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 60px;
+    background-color: #0b1d33;
+}
+
+.camada {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -35%;
+    height: 170%;
+    will-change: transform;
+}
+
+.camada-fundo {
+    background:
+        radial-gradient(circle at 20% 30%, rgba(216, 179, 106, 0.25) 0, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(154, 13, 0, 0.35) 0, transparent 45%),
+        linear-gradient(180deg, #0b1d33 0%, #123d2b 100%);
+}
+
+.camada-estrelas {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--dourado);
+    font-size: 42px;
+    opacity: 0.6;
+}
+
+.parallax-texto {
+    position: relative;
+    z-index: 2;
+    padding: 40px 6%;
+    text-align: center;
+    color: var(--branco);
+}
+
+.parallax-texto h2 {
+    margin: 14px 0 8px;
+    color: var(--branco);
+    font-size: clamp(26px, 4vw, 40px);
+}
+
+.parallax-texto p {
+    color: #e0e9e1;
+}
+
+/* =========================================
+   NEVE, MÚSICA, VOLTAR AO TOPO E CONTAGEM
+   ========================================= */
+
+@keyframes cair {
+    from { transform: translateY(-10vh); }
+    to { transform: translateY(110vh); }
+}
+
+.floco {
+    position: fixed;
+    top: 0;
+    z-index: 50;
+    color: #ffffff;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+    animation: cair 10s linear infinite;
+    pointer-events: none;
+}
+
+.botao-musica {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 150;
+    padding: 11px 16px;
+    border: none;
+    border-radius: 30px;
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    font-weight: bold;
+    box-shadow: var(--sombra);
+    transition: background-color 0.3s;
+}
+
+.botao-musica:hover {
+    background-color: var(--vermelho);
+}
+
+.botao-topo {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 150;
+    display: none;
+    width: 46px;
+    height: 46px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--dourado);
+    color: var(--verde-escuro);
+    font-size: 22px;
+    font-weight: bold;
+    box-shadow: var(--sombra);
+}
+
+.botao-topo.visivel {
+    display: block;
+}
+
+.contagem-natal {
+    margin: 30px auto;
+    padding: 30px 20px;
+    max-width: 800px;
+    border-radius: 12px;
+    background-color: var(--verde-escuro);
+    text-align: center;
+}
+
+.contagem-natal h2 {
+    margin: 12px 0;
+    color: var(--branco);
+}
+
+.conteudo-pagina .contagem-natal .contagem-valor {
+    margin: 0;
+    color: var(--dourado);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(22px, 4vw, 34px);
+    font-weight: bold;
+}

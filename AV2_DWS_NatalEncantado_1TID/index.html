@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Encontre presentes, enfeites e decorações na loja Natal Encantado.">
+    <title>Natal Encantado | Sua loja de Natal</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsivo.css">
+        <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <header class="cabecalho">
+
+        <a class="logo" href="index.html">
+            <span class="logo-icone">✦</span>
+            <span>Natal Encantado</span>
+        </a>
+        <button class="botao-menu" id="botao-menu"
+            aria-label="Abrir menu" aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="menu" id="menu">
+            <a class="link-ativo" href="index.html">Início</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="sobre.html">Sobre nós</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+
+        <a class="botao-cabecalho" href="produtos.html">
+            Comprar agora
+        </a>
+
+    </header>
+
+    <main>
+
+        <section class="banner">
+            <div class="banner-conteudo">
+
+                <span class="etiqueta">A magia está no ar</span>
+
+                <h1>Um Natal cheio de <span>encanto</span></h1>
+
+                <p>
+                    Decorações especiais, presentes inesquecíveis
+                    e pequenos detalhes que transformam o Natal
+                    em um momento mágico.
+                </p>
+
+                <div class="banner-botoes">
+                    <a class="botao-dourado" href="produtos.html">
+                        Explorar produtos
+                    </a>
+
+                    <a class="botao botao-contorno" href="sobre.html">
+                        Conheça nossa loja
+                    </a>
+                </div>
+
+                <p class="frase-banner">
+                    Feito para tornar seus momentos especiais
+                </p>
+
+            </div>
+
+            <div class="banner-imagem">
+                <img src="img/avore.png" alt="Árvore de Natal decorada com luzes e enfeites">
+            </div>
+
+        </section>
+
+        <section class="slideshow" id="slideshow" aria-label="Destaques da loja">
+
+            <div class="slide ativo">
+                <img src="https://images.unsplash.com/photo-1543589077-47d81606c1bf?auto=format&fit=crop&w=1400&q=80"
+                    alt="Árvore de Natal decorada">
+                <div class="slide-texto">
+                    <h2>Sua árvore, do jeito mais bonito</h2>
+                    <p>Árvores, bolas e enfeites para o seu Natal.</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1512909006721-3d6018887383?auto=format&fit=crop&w=1400&q=80"
+                    alt="Presentes natalinos embrulhados">
+                <div class="slide-texto">
+                    <h2>Presentes que encantam</h2>
+                    <p>Cestas, caixas e lembranças para quem você ama.</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1513297887119-d46091b24bfa?auto=format&fit=crop&w=1400&q=80"
+                    alt="Luzes decorativas de Natal">
+                <div class="slide-texto">
+                    <h2>Luzes que aquecem a casa</h2>
+                    <p>Pisca-piscas, velas e luminárias natalinas.</p>
+                </div>
+            </div>
+
+            <button class="slide-seta anterior" id="anterior" aria-label="Slide anterior">‹</button>
+            <button class="slide-seta proximo" id="proximo" aria-label="Próximo slide">›</button>
+            <div class="slide-indicadores" id="indicadores"></div>
+
+        </section>
+
+        <section class="beneficios">
+
+            <article class="beneficio">
+               
+                <h3>Presentes especiais</h3>
+                <p>Opções para surpreender quem você ama.</p>
+            </article>
+
+            <article class="beneficio">
+               
+                <h3>Decoração encantadora</h3>
+                <p>Detalhes que deixam sua casa mais bonita.</p>
+            </article>
+
+            <article class="beneficio">
+               
+                <h3>Feito com carinho</h3>
+                <p>Uma seleção pensada para o seu Natal.</p>
+            </article>
+
+        </section>
+
+        <section class="secao-produtos">
+
+            <div class="titulo-secao">
+                <span class="etiqueta">Nossa seleção</span>
+                <h2>Encontre seu encanto natalino</h2>
+                <p>Conheça alguns dos produtos da nossa loja.</p>
+            </div>
+
+            <div class="grade-produtos" id="produtos-destaque"></div>
+
+            <div class="centro">
+                <a class="botao botao-verde" href="produtos.html">
+                    Ver todos os produtos
+                </a>
+            </div>
+
+        </section>
+
+        <section class="parallax" id="parallax">
+            <div class="camada camada-fundo" data-velocidade="0.15"></div>
+            <div class="camada camada-estrelas" data-velocidade="0.35" aria-hidden="true">✦ &nbsp; ✧ &nbsp; ✦ &nbsp; ✧ &nbsp; ✦</div>
+            <div class="parallax-texto">
+                <span class="etiqueta">Noite de magia</span>
+                <h2>Cada detalhe faz o Natal brilhar</h2>
+                <p>Role a página e veja as camadas se moverem.</p>
+            </div>
+        </section>
+
+        <section class="faixa-especial">
+
+            <div>
+                <span class="etiqueta">Momentos que ficam</span>
+                <h2>O melhor do Natal é compartilhar.</h2>
+                <p>
+                    Prepare sua casa, escolha seus presentes
+                    e crie lembranças especiais.
+                </p>
+            </div>
+
+            <a class="botao botao-dourado" href="galeria.html">
+                Ver inspirações
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+
+        <div class="rodape-conteudo">
+
+            <div>
+                <a
+                    class="logo logo-rodape"
+                    href="index.html">
+                   ✦ Natal Encantado
+                </a>
+
+                <p>
+                    Espalhando a magia do Natal em cada detalhe.
+                </p>
+            </div>
+
+            <div>
+                <h3>Navegação</h3>
+                <a href="index.html">Início</a>
+                <a href="produtos.html">Produtos</a>
+                <a href="sobre.html">Sobre nós</a>
+                <a href="contato.html">Contato</a>
+            </div>
+
+            <div>
+                <h3>Atendimento</h3>
+                <p>Segunda a sexta</p>
+                <p>Das 9h às 18h</p>
+                <a href="contato.html">Fale conosco</a>
+            </div>
+
+        </div>
+
+        <div class="rodape-final">
+            <p>
+                &copy; 2026 Natal Encantado. Imagens: Unsplash.
+            </p>
+        </div>
+
+    </footer>
+
+    <button class="botao-musica" id="btn-musica" aria-pressed="false">🔔 Tocar música</button>
+    <button class="botao-topo" id="topo" aria-label="Voltar ao topo">↑</button>
+
+</body>
+</html>
